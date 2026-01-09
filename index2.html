@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holland Residential - Area of Opportunity Report</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Red Hat Text"', 'sans-serif'],
+                    },
+                    colors: {
+                        brandDeep: '#4A0039',      /* Deep Purple */
+                        brandOffWhite: '#F9F6F3',  /* Off-White */
+                        brandLavender: '#EAB8F2',  /* Lavender Accent */
+                        brandMedium: '#7A005D',    /* Medium Purple */
+                        textDark: '#1A1A1A',
+                    },
+                    fontSize: {
+                        'title': ['48pt', { lineHeight: '1.1', fontWeight: '700' }],
+                        'body': ['12pt', { lineHeight: '1.6', fontWeight: '400' }],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { margin: 0; overflow-x: hidden; background-color: #F9F6F3; }
+        .slide {
+            min-height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 4rem;
+            position: relative;
+        }
+        .bento-card {
+            background: white;
+            border: 1px solid #E5E7EB;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(74, 0, 57, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .bento-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(74, 0, 57, 0.15);
+            border-color: #EAB8F2;
+        }
+    </style>
+</head>
+<body class="text-textDark antialiased">
+
+    <!-- Slide 1: Title -->
+    <section class="slide bg-brandDeep text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-brandMedium opacity-20 transform skew-x-12 translate-x-20"></div>
+        
+        <div class="max-w-6xl mx-auto w-full z-10 grid grid-cols-12 gap-12 items-center">
+            <div class="col-span-8">
+                <div class="flex items-center space-x-6 mb-12">
+                    <img src="https://i.postimg.cc/cHN59fD9/rippling_icon_white.png" 
+                         alt="Rippling Logo" 
+                         class="h-12 w-auto object-contain brightness-0 invert opacity-90">
+                    
+                    <span class="text-3xl text-brandLavender/50 font-light">×</span>
+                    
+                    <img src="https://i.postimg.cc/0NSB0VCf/holland_residential.png" 
+                         alt="Holland Logo" 
+                         class="h-16 w-auto object-contain brightness-0 invert opacity-90">
+                </div>
+
+                <h1 class="text-title mb-6 leading-tight">
+                    Area of Opportunity Report
+                </h1>
+                <p class="text-body text-brandLavender/90 text-xl max-w-lg border-l-4 border-brandLavender pl-6 py-2">
+                    Prepared for the Executive Team at <br><strong>Holland Residential</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 2: Findings -->
+    <section class="slide bg-brandOffWhite">
+        <div class="max-w-7xl mx-auto w-full">
+            <h2 class="text-title text-brandDeep mb-12">What we found & Why it Matters</h2>
+
+            <div class="grid grid-cols-12 gap-8">
+                
+                <!-- Current System Card -->
+                <div class="col-span-12">
+                    <div class="bento-card flex items-center bg-white border-l-8 border-l-brandMedium !p-6">
+                        <div class="mr-6 p-4 bg-brandOffWhite rounded-full text-brandDeep text-2xl">
+                            <i class="fa-solid fa-server"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-1">Current System</h3>
+                            <p class="text-2xl text-brandDeep font-bold">UKG (Legacy Migration Issues)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Challenges Column -->
+                <div class="col-span-12 md:col-span-6 flex flex-col gap-6">
+                    <h3 class="text-2xl font-bold text-brandDeep border-b-2 border-brandLavender/50 pb-2">Key Challenges</h3>
+                    
+                    <div class="bento-card !p-6">
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-triangle-exclamation text-brandMedium mt-1 mr-4 text-xl"></i>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1 text-brandDeep">Broken Data Flow</h4>
+                                <p class="text-gray-600 text-sm leading-relaxed">Specific breakdowns between Timesheets and the "Activity" component leading to sync failures.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bento-card !p-6">
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-user-xmark text-brandMedium mt-1 mr-4 text-xl"></i>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1 text-brandDeep">Usability Struggles</h4>
+                                <p class="text-gray-600 text-sm leading-relaxed">"Very painful" migration experience causing low adoption and frustration across the workforce.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bento-card !p-6">
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-layer-group text-brandMedium mt-1 mr-4 text-xl"></i>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1 text-brandDeep">Consolidation Issues</h4>
+                                <p class="text-gray-600 text-sm leading-relaxed">History of growth/acquisition has created manual reconciliation needs across properties.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Impact Column -->
+                <div class="col-span-12 md:col-span-6 flex flex-col gap-6">
+                    <h3 class="text-2xl font-bold text-brandDeep border-b-2 border-brandLavender/50 pb-2">Business Impact</h3>
+
+                    <div class="bento-card bg-brandDeep text-white border-none !p-6">
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-chart-line text-brandLavender mt-1 mr-4 text-xl"></i>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Operational Drag</h4>
+                                <p class="text-brandLavender/80 text-sm leading-relaxed">Manual workarounds are consuming valuable time from HR & Finance teams.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bento-card bg-brandDeep text-white border-none !p-6">
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-eye-slash text-brandLavender mt-1 mr-4 text-xl"></i>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Reduced Visibility</h4>
+                                <p class="text-brandLavender/80 text-sm leading-relaxed">Leadership lacks real-time labor data visibility due to system fragmentation.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bento-card bg-brandDeep text-white border-none !p-6">
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-ban text-brandLavender mt-1 mr-4 text-xl"></i>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Scalability Bottleneck</h4>
+                                <p class="text-brandLavender/80 text-sm leading-relaxed">Existing friction threatens to slow down future property operations and growth.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 3: Resolve -->
+    <section class="slide bg-white">
+        <div class="max-w-7xl mx-auto w-full">
+            <div class="mb-12 flex justify-between items-end">
+                <div>
+                    <h2 class="text-title text-brandDeep mb-2">Rippling's Resolve</h2>
+                    <p class="text-xl text-gray-500">Areas of Impact</p>
+                </div>
+                <div class="flex items-center space-x-6 opacity-100">
+                    <img src="https://i.postimg.cc/GhYFS2tz/a2089b19-e808-40fc-9289-9e0d781dccf6.png" 
+                         alt="Rippling" 
+                         class="h-8 w-auto">
+                    <span class="text-gray-300 text-2xl">|</span>
+                    <img src="https://i.postimg.cc/wj2sSspH/75b6cc38-31f8-4ac0-952a-2beae1c2d704.png" 
+                         alt="Holland" 
+                         class="h-10 w-auto">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="col-span-1 group relative mt-10 lg:mt-0">
+                    <div class="absolute -top-10 left-0 text-6xl font-bold text-gray-200 group-hover:text-brandLavender transition-colors">1</div>
+                    <div class="bento-card border-t-8 border-t-brandDeep hover:bg-brandOffWhite flex flex-col justify-between h-64">
+                        <div>
+                            <div class="mb-6 bg-brandDeep/10 w-12 h-12 rounded-lg flex items-center justify-center text-brandDeep text-xl">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-brandDeep mb-3">Drive Efficiency</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                Unify HR, Payroll, and Timekeeping under a single workforce management tool to streamline day-to-day tasks.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-span-1 group relative mt-10 lg:mt-0">
+                    <div class="absolute -top-10 left-0 text-6xl font-bold text-gray-200 group-hover:text-brandLavender transition-colors">2</div>
+                    <div class="bento-card border-t-8 border-t-brandDeep hover:bg-brandOffWhite flex flex-col justify-between h-64">
+                        <div>
+                            <div class="mb-6 bg-brandDeep/10 w-12 h-12 rounded-lg flex items-center justify-center text-brandDeep text-xl">
+                                <i class="fa-solid fa-piggy-bank"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-brandDeep mb-3">Lower Costs</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                Leverage technology to reduce administrative overhead (manual reconciliation) and increase scalability.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-span-1 group relative mt-10 lg:mt-0">
+                    <div class="absolute -top-10 left-0 text-6xl font-bold text-gray-200 group-hover:text-brandLavender transition-colors">3</div>
+                    <div class="bento-card border-t-8 border-t-brandDeep hover:bg-brandOffWhite flex flex-col justify-between h-64">
+                        <div>
+                            <div class="mb-6 bg-brandDeep/10 w-12 h-12 rounded-lg flex items-center justify-center text-brandDeep text-xl">
+                                <i class="fa-solid fa-database"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-brandDeep mb-3">Data Integrity</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                Eliminate "stitching" errors. Secure sensitive employee information with a truly unified database.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-span-1 group relative mt-10 lg:mt-0">
+                    <div class="absolute -top-10 left-0 text-6xl font-bold text-gray-200 group-hover:text-brandLavender transition-colors">4</div>
+                    <div class="bento-card border-t-8 border-t-brandDeep hover:bg-brandOffWhite flex flex-col justify-between h-64">
+                        <div>
+                            <div class="mb-6 bg-brandDeep/10 w-12 h-12 rounded-lg flex items-center justify-center text-brandDeep text-xl">
+                                <i class="fa-solid fa-users-viewfinder"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-brandDeep mb-3">Improve Visibility</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                Provide leadership with trusted, real-time insights into labor costs and operations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
